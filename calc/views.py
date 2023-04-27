@@ -5,8 +5,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from .models import Formula, Usuario
 from .forms import FormulaForm
 
-def index(request):
-    return render(request, 'index.html')
 def write(request):
     if request.method == 'POST':
         form = FormulaForm(request.POST)
